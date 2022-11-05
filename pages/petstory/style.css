@@ -308,3 +308,117 @@ background-clip: text;
   bottom: -100px;
   right: 0px;
 }
+
+.page-chooseanimal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.chooseanimal-flower_left {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+  z-index: 2;
+  bottom: 0px;
+  left: 0px;
+}
+
+.chooseanimal-flower_right {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+  z-index: 2;
+  bottom: 0px;
+  right: 0px;
+}
+
+.chooseanimal-mainblock {
+  display: flex;
+  flex-direction: row;
+  margin: 180px 138px 0px 138px;
+  background-color: #fff;
+}
+
+.chooseanimal-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chooseanimal-arrow button{
+  height: 64px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+}
+
+.chooseanimal-arrow button:active{
+  background: #4B9200;
+}
+
+.chooseanimal-cards {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 1160x;
+  margin: 0px 20px;
+  border-radius: 20px;
+}
+
+.chooseanimal-card {
+  width: 366px;
+  overflow: hidden;
+  border: 2px solid #FA6F32;
+  border-radius: 20px;
+}
+
+.chooseanimal-card:not(:nth-child(-n+3)) {
+  margin-top: 20px;
+}
+
+.card-image {
+  width: 62px;
+  background-color: #fff;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  max-height: 60px;
+  padding: 12px;
+}
+
+.bottom-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color:#000000;
+}
+
+.bottom-text button {
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 140%;
+  background-color: #fff;
+}
+
+.bottom-text small {
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.chooseanimal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0px 100px 0px;
+}
