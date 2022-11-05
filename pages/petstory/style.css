@@ -72,3 +72,111 @@ sub {
   border: 0.7px solid #D31414;
   color: #D31414;
 }
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1600px;
+  position: relative;
+  flex-direction: column;
+  display: 5px solid red;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1600px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  z-index: 50;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  background-color: #000000;
+  color: #fff;
+  padding: 0px 220px 0px 220px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.55px 4.75px;
+  position: relative;
+  z-index: 2;
+  width: 82px;
+  text-align: center;
+  margin-right: 63px;
+  border: 1.19px solid #FFFFFF;
+  border-radius: 2px;
+}
+
+.logo-bambuk {
+  position: absolute;
+  z-index: 3;
+  top: 25px;
+  left: 11px;
+}
+
+.header-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu-item:first-child {
+background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.menu-list:not(:last-child) {
+  margin-right: 58px;
+}
+
+.menu-item {
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 58px;
+}
+
+.menu-link {
+  color: #fff;
+  font-weight: 500;
+  line-height: 22.4px;
+}
+
+.menu-link:hover {
+  color: #F9804B;
+  background-color: transparent;
+}
+
+.header-designby {
+  line-height: 140%;
+  font-weight: 500;
+}
