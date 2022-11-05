@@ -264,3 +264,47 @@ background-clip: text;
   right: 319px;
   z-index: 5;
 }
+
+.page-howitworks {
+  position: relative;
+  z-index: 1;
+}
+
+.howitworks-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 403px;
+  margin-top: 140px;
+}
+
+.howitworks-block_image {
+  margin-right: 87px;
+}
+
+.howitworks-block_text {
+  display: flex;
+  flex-direction: column;
+  width: 465px;
+  color: #333B41;
+}
+
+.howitworks-block_text p {
+  margin-top: 34px;
+  line-height: 140%;
+}
+
+.howitworks-block_text p:not(:last-child){
+  margin-bottom: 54px;
+  line-height: 143%;
+}
+
+.howitworks-flower {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+  z-index: 2;
+  bottom: -100px;
+  right: 0px;
+}
