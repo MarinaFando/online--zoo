@@ -474,6 +474,11 @@ background-clip: text;
   line-height: 130%;
 }
 
+.text-thirdpart a{
+  color: inherit;
+  text-decoration: underline #FE9013;
+}
+
 .feedfriend-schema h3 {
   display: flex;
   justify-content: center;
@@ -695,6 +700,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.footernav-item:first-child a {
+  color: #F9804B;
 }
 
 .footernav-item:not(:last-child) {
