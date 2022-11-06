@@ -48,6 +48,7 @@ body {
   font-weight: 400;
   font-family: Roboto;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -192,6 +193,11 @@ background-clip: text;
 .header-designby {
   line-height: 140%;
   font-weight: 500;
+}
+
+.header-designby a:hover {
+  color: #F9804B;
+  background-color: transparent;
 }
 
 .page {
@@ -496,7 +502,6 @@ input[type='radio'] {
   border: 1px solid #FE9013;
   border-radius: 50%;
   outline: none;
-  /* margin-right: 10px; */
   transform: translateY(-0.075em);
   -webkit-appearance: none;
 }
@@ -515,6 +520,7 @@ input[type="radio"]:checked {
   color: #333B41;
   line-height: 140%;
 }
+
 
 footer {
   background-color: #111115;
@@ -601,6 +607,10 @@ footer {
   align-items: flex-end;
 }
 
+.footernav-item:first-child a {
+  color: #F9804B;
+}
+
 .footernav-item:not(:last-child) {
   margin-right: 58px;
 }
@@ -643,7 +653,6 @@ input[type="email"]:active {
 .footersubs-email button:active {
   border: 1px solid #4B9200;
   color: #4B9200;
-  cursor: pointer;
 }
 
 .footer-designedby {

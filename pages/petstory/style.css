@@ -47,6 +47,7 @@ body {
   font-weight: 400;
   font-family: Roboto;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -82,10 +83,9 @@ sub {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 1600px;
+  max-width: 1600px;
   position: relative;
   flex-direction: column;
-  display: 5px solid red;
 }
 
 .container {
@@ -156,10 +156,6 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
-.menu-list:not(:last-child) {
-  margin-right: 58px;
-}
-
 .menu-item {
   font-weight: 500;
   line-height: 140%;
@@ -183,6 +179,11 @@ background-clip: text;
 .header-designby {
   line-height: 140%;
   font-weight: 500;
+}
+
+.header-designby a:hover {
+  color: #F9804B;
+  background-color: transparent;
 }
 
 .page {
@@ -309,6 +310,11 @@ background-clip: text;
   z-index: 2;
   bottom: -100px;
   right: 0px;
+  overflow: hidden;
+}
+
+.howitworks-flower img {
+  overflow: hidden;
 }
 
 .page-chooseanimal {
@@ -328,6 +334,10 @@ background-clip: text;
   left: 0px;
 }
 
+.chooseanimal-flower_left img{
+  overflow: hidden;
+}
+
 .chooseanimal-flower_right {
   position: absolute;
   display: flex;
@@ -336,6 +346,10 @@ background-clip: text;
   z-index: 2;
   bottom: 0px;
   right: 0px;
+}
+
+.chooseanimal-flower_right img {
+  overflow: hidden;
 }
 
 .chooseanimal-mainblock {
@@ -615,6 +629,10 @@ input[type=range] {
   z-index: 2;
   bottom: -130px;
   right: 0px;
+}
+
+.testimonials-flower img {
+  overflow: hidden;
 }
 
 footer {
