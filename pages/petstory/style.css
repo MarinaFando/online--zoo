@@ -185,6 +185,11 @@ background-clip: text;
   font-weight: 500;
 }
 
+.header-designby a:hover {
+  color: #F9804B;
+  background-color: transparent;
+}
+
 .page {
   width: 100%;
 }
