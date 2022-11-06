@@ -383,6 +383,11 @@ background-clip: text;
   border-radius: 20px;
 }
 
+.chooseanimal-card:hover {
+  opacity: 0.7;
+  transform: translateY(-5px);
+}
+
 .chooseanimal-card:not(:nth-child(-n+3)) {
   margin-top: 20px;
 }
