@@ -1606,17 +1606,6 @@ input[type="email"]:active {
     padding: 12px 20px 12px 20px;
   }
 
-  .footer-logo {
-    width: 300px;
-    justify-content: center;
-    border: 0px;
-  }
-
-  .footerlogo-bambuk {
-    top: 0;
-    left: 160px;
-  }
-
   .contactlist-items {
     display: flex;
     flex-direction: column;
@@ -1669,6 +1658,17 @@ input[type="email"]:active {
   .footer-mainblock {
     flex-direction: column;
     padding: 20px 10px 20px 10px;
+  }
+
+  .footer-logo {
+    width: 300px;
+    justify-content: center;
+    border: 0px;
+  }
+
+  .footerlogo-bambuk {
+    top: 0;
+    left: 160px;
   }
 
   .contactlist-items {
