@@ -182,6 +182,10 @@ sub {
   width: 18px;
   height: 10px;
   display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 11px;
 }
 
 @media (max-width: 1000px) {
@@ -1046,6 +1050,10 @@ background-clip: text;
   padding-top: 70px;
 }
 
+.card-greeniconarrow {
+ display: none;
+}
+
 .schema-card {
   width: 168px;
   height: 244px;
@@ -1126,6 +1134,7 @@ background-clip: text;
   }
 
   .card-greeniconarrow {
+    display: flex;
     width: 100%;
     margin: -15px -29px;
     z-index: 2;
@@ -1165,18 +1174,29 @@ background-clip: text;
   }
 
   .feedfriend-text {
-    padding: 5px;
     text-align: center;
   }
 
-  .card-greeniconarrow:first-child {
-    transform: rotate(90deg);
+  .feedfriend-schema h3{
+    font-size: 1.5rem;
+    line-height: 120%;
+
   }
 
   .card-greeniconarrow img {
-    top: 100px;
-    left: 100px;
-    transform: rotate(90deg);
+    transform: rotate(86deg);
+  }
+
+  .greeniconarrow-first {
+    position: absolute;
+    top: 405px;
+    left: 235px;
+  }
+
+  .greeniconarrow-second {
+    position: absolute;
+    top: 645px;
+    left: 235px;
   }
 
   .text-firstpart sub{
@@ -1690,6 +1710,7 @@ input[type="email"]:active {
 
   .footernav-list {
     display: flex;
+    margin-right: 10px;
   }
 
   .footernav-item:not(:last-child) {
