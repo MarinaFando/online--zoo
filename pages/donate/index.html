@@ -36,6 +36,10 @@
         <div class="header-designby">
           <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by &#169</a>
         </div>
+        <div class="burger-menu" onclick="showBurgerMenu()">
+          <img src="../../assets/icons/header/burger_menu.svg" alt="Menu">
+        </div>
+
       </div>
     </header>
     <main class="page">
@@ -68,7 +72,7 @@
                 <img src="../../assets/images/section-donate/panda_widget1.svg" alt="Animal image">
               </div>
             </div>
-            <div class="donate-amountofmoney">
+            <div class="donate-amountofmoney donate-amountofmoney-long">
               <label for="amount">Amount</label><br />
               <input class="slider" type="range" min="1" max="8" step="1" id="amount" name="amount" list="amountdonation" value="3"/>
               <datalist id="amountdonation">
@@ -80,6 +84,17 @@
                 <option value="100" label="$100"></option>
                 <option value="50" label="$50"></option>
                 <option value="25" label="$25"></option>
+              </datalist>
+            </div>
+            <div class="donate-amountofmoney donate-amountofmoney-short">
+              <label for="amount">Amount</label>
+              <input class="slider" type="range" min="1" max="5" step="1" id="amount" name="amount" list="amountdonation" value="3"/>
+              <datalist id="amountdonation">
+                <option value="5000" label="$500"></option>
+                <option value="2000" label="$250"></option>
+                <option value="1000" label="$100"></option>
+                <option value="500" label="$50"></option>
+                <option value="250" label="$25"></option>
               </datalist>
             </div>
             <div class="donate-anotheramount">
@@ -104,30 +119,42 @@
         </div>
       </section>
     </main>
- <footer class="footer container">
+    <footer class="footer container">
        <div class="footer-mainblock">
-        <div class="footer-contactus">
-          <div class="contactus-left">
-            <div class="footer-logo">
-              <a href="/online-zoo/pages/petstory/index.html">
-                <p>PetStory online</p>
-              </a>
+
+        <div class="footer-top">
+          <div class="footer-contactus">
+            <div class="contactus-left">
+              <div class="footer-logo">
+                <a href="/online-zoo/pages/petstory/index.html">
+                  <p>PetStory online</p>
+                </a>
+              </div>
+              <div class="footerlogo-bambuk">
+                <img src="../../assets/icons/header/bamboo.svg" alt="bamboo-icon">
+              </div>
             </div>
-            <div class="footerlogo-bambuk">
-              <img src="../../assets/icons/header/bamboo.svg" alt="bamboo-icon">
+            <div class="footersub">
+              <sub>Subscribe to our news</sub>
+              <div class="footersubs-email">
+                <input type="email" placeholder="Enter your email" >
+                <button type="button">Submit</button>
+              </div>
             </div>
           </div>
-          <div class="footersub">
-            <sub>Subscribe to our news</sub>
-            <div class="footersubs-email">
-              <input type="email" placeholder="Enter your email" >
-              <button type="button">Submit</button>
-            </div>
+          <div class="footer-button">
+            <a href="/online-zoo/pages/donate/index.html"><button class="button-orange" type="button">donate for volunteers</button></a>
           </div>
+          <nav>
+            <ul class="footernav-additionallist">
+              <li class="footernav-item"><a class="menu-link">About</a></li>
+              <li class="footernav-item"><a class="menu-link">Map</a></li>
+              <li class="footernav-item"><a class="menu-link">Zoos</a></li>
+              <li class="footernav-item"><a class="menu-link">Contact us</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="footer-button">
-          <a href="/online-zoo/pages/donate/index.html"><button class="button-orange" type="button">donate for volunteers</button></a>
-        </div>
+
         <div class="footer-contactlist">
           <ul class="contactlist-items">
             <li class="contactlist-item">
