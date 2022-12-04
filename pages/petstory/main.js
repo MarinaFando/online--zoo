@@ -20,3 +20,12 @@ function closeBurgerMenu() {
     burgerMenuList.style.display = "flex";
   }
 }
+
+function showSlides() {
+  let cards = document.querySelectorAll(".chooseanimal-card");
+  cards.forEach(
+    (card) => {
+      card.style.order = Math.floor(Math.random() * 7)
+    }
+  )
+}
