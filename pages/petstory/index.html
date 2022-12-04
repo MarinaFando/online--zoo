@@ -11,6 +11,7 @@
   <title>Online ZOO</title>
 </head>
 <body>
+  <div class="grey-area" onclick="closeBurgerMenu()"></div>
   <div class="wrapper">
     <header class="header">
       <div class="header__container container">
@@ -36,8 +37,52 @@
         <div class="header-designby">
           <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by &#169</a>
         </div>
-        <div class="burger-menu">
+        <div class="burger-menu" onclick="showBurgerMenu()">
           <img src="../../assets/icons/header/burger_menu.svg" alt="Menu">
+        </div>
+        <div class="burger-container">
+          <div class="top-burgermenu">
+            <div>
+              <div class="burger-logo">
+                <a href="/online-zoo/pages/petstory/">
+                  <h1>PetStory online</h1>
+                </a>
+              </div>
+              <div class="burger-bambuk">
+                <img src="../../assets/icons/header/bamboo-orange.svg" alt="bamboo-icon"/>
+              </div>
+            </div>
+            <button class="cross-button" type="button" onclick="closeBurgerMenu()"><img src="../../assets/icons/header/x_icon.svg" alt="Cross button"></button>
+          </div>
+          <ul class="burgermenu-list" style="display: block;">
+            <li class="burgermenu-item">
+              <a class="burgermenu-link" href="/online-zoo/pages/petstory/">
+                About
+              </a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Map</a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Zoos</a>
+            </li>
+            <li class="burgermenu-item">
+              <a
+                class="burgermenu-link"
+                href="/online-zoo/pages/donate/index.html"
+              >
+                Donate
+              </a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Contact us</a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">
+                Designed by &#169
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -74,7 +119,7 @@
           <img src="../../assets/images/section-chooseanimal/palm_foto.jpeg" alt="Palm">
         </div>
         <div class="chooseanimal-mainblock">
-        <div class="chooseanimal-arrow">
+        <div class="chooseanimal-arrow arrow-left" onclick="plusSlides()">
           <button type="button"><img src="../../assets/icons/section-chooseanimal/arrow.svg" alt="Button with left arrow"></button>
         </div>
         <div class="chooseanimal-cards">
@@ -163,7 +208,7 @@
             </div>
           </div>
         </div>
-        <div class="chooseanimal-arrow">
+        <div class="chooseanimal-arrow arrow-right" onclick="plusSlides()">
           <button type="button"><img src="../../assets/icons/section-chooseanimal/arrow2.svg" alt="Button with right arrow"></button>
         </div>
         </div>
@@ -414,6 +459,6 @@
       </div>
     </footer>
   </div>
-
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

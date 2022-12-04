@@ -50,6 +50,10 @@ body {
   overflow-x: hidden;
 }
 
+.grey-area {
+  display: none;
+}
+
 h1 {
   font-size: 1.19rem;
   line-height: 120%;
@@ -188,6 +192,10 @@ sub {
   top: 11px;
 }
 
+.burger-container {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .header__container {
   padding: 0px 30px 0px 30px;
@@ -196,7 +204,7 @@ sub {
 
 @media (max-width: 640px) {
   .header {
-    left: 0px;
+    left: 0;
     top: 0;
     position: fixed;
     width: 100%;
@@ -232,6 +240,93 @@ sub {
 
   .burger-menu {
     display: block
+  }
+
+  .grey-area {
+    position:fixed;
+    left:0;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background:#000;
+    opacity:0.5;
+    z-index: 5;
+  }
+
+  .burger-container {
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    max-width: 640px;
+    height: 329px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    z-index: 71;
+    padding: 10px;
+  }
+
+  .top-burgermenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .burger-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30.4px;
+    position: relative;
+    width: 82px;
+    text-align: center;
+    color: #FE9013;
+    font-size: 0.95rem;
+    line-height: 120%;
+    border: 0.8px solid #FE9013;
+    padding: 2.84px 3.8px;
+    border-radius: 2px;
+  }
+
+  .burger-logo h1 {
+    color: #FE9013;
+  }
+
+  .burger-bambuk {
+    color: #E47209;
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    left: 24px;
+  }
+
+  .cross-button {
+    background-color: #FFFFFF;
+    margin-right: 12px;
+  }
+
+  .burgermenu-list {
+    background-color: #FFFFFF;
+  }
+
+  .burgermenu-item {
+    font-size: 1rem;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+
+  .burgermenu-link {
+    color: #333B41;
+  }
+
+  .burgermenu-link:hover {
+    color: #F9804B;
+  }
+
+  .active {
+    background-color: #04AA6D;
+    color: white;
   }
 }
 
@@ -655,16 +750,16 @@ background-clip: text;
 }
 
 .chooseanimal-arrow button{
-  height: 64px;
-  width: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 64px;
+  width: 64px;
   border-radius: 32px;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
 
-.chooseanimal-arrow button:active{
+.chooseanimal-arrow button:active {
   background: #4B9200;
 }
 
@@ -689,10 +784,6 @@ background-clip: text;
 .chooseanimal-card:hover {
   opacity: 0.7;
   transform: translateY(-5px);
-}
-
-.chooseanimal-card:not(:nth-child(-n+3)) {
-  margin-top: 20px;
 }
 
 .card-image {
@@ -740,7 +831,6 @@ background-clip: text;
   margin: 0px 0px 100px 0px;
 }
 
-
 @media (max-width: 1000px) {
 
   .chooseanimal-mainblock {
@@ -773,93 +863,31 @@ background-clip: text;
     position: relative;
     z-index: 1;
     margin: 0px 0px 80px 0px;
-  }
-
-  .chooseanimal-arrow:first-child {
-    height: 92px;
-    width: 100%;
-    position: absolute;
-    height: 77%;
-    width:72%;
-    z-index: 3;
+    row-gap: 92px;
   }
 
   .chooseanimal-arrow {
-    height: 92px;
-    width:100%;
+    height: 65px;
     position: absolute;
-    height: 77%;
-    width: 115%;
     z-index: 3;
+  }
+
+  .arrow-left {
+    top: 367px;
+    left: 352px;
+  }
+
+  .arrow-right {
+    top: 367px;
+    left: 580px;
   }
 
   .chooseanimal-arrow button{
     cursor: pointer;
   }
 
-  .chooseanimal-card:not(:nth-child(-n+3)) {
-    margin-top: 92px;
-  }
-}
-
-@media (max-width: 1000px) {
-
-  .chooseanimal-mainblock {
-    width: 940px;
-    margin: 0px 30px 0px 30px;
-  }
-
-  .chooseanimal-flower_left img {
-    height: 202px;
-  }
-
-  .chooseanimal-flower_right img {
-    height: 180px;
-  }
-
-  .chooseanimal-card {
-    width: 293px;
-    height: 354px;
-  }
-
-  .card-image img {
-    height: 293px;
-    width: 100%;
-    background-color: #fff;
-  }
-
-  .chooseanimal-cards {
-    width: 100%;
-    height: 801px;
-    position: relative;
-    z-index: 1;
-    margin: 0px 0px 80px 0px;
-  }
-
-  .chooseanimal-arrow:first-child {
-    height: 92px;
-    width: 100%;
-    position: absolute;
-    height: 77%;
-    width:72%;
-    z-index: 3;
-  }
-
-  .chooseanimal-arrow {
-    height: 92px;
-    width:100%;
-    position: absolute;
-    height: 77%;
-    width: 115%;
-    z-index: 3;
-  }
-
-  .chooseanimal-arrow button{
-    cursor: pointer;
-  }
-
-  .chooseanimal-card:not(:nth-child(-n+3)) {
-    margin-top: 92px;
+  .chooseanimal-button {
+    margin: 0px 0px 140px 0px;
   }
 }
 
@@ -873,7 +901,7 @@ background-clip: text;
   .chooseanimal-card {
     width: 285px;
     height: 332px;
-        padding-bottom: 11px;
+    padding-bottom: 11px;
   }
 
   .card-image img {
@@ -890,27 +918,21 @@ background-clip: text;
 
   .chooseanimal-mainblock {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: stretch; */
+    /* flex-direction: row; */
     margin: 0px 20px 60px 20px;
     background-color: #fff;
   }
 
-  .chooseanimal-arrow:first-child {
-    height: 92px;
-    width: 295px;
-    position: absolute;
-    height: 78%;
-    width: 72%;
-    z-index: 3;
+  .arrow-left {
+    top: 345px;
+    left: 240px;
   }
 
-  .chooseanimal-arrow {
-    height: 92px;
-    width: 295px;
-    position: absolute;
-    height: 78%;
-    width: 115%;
-    z-index: 3;
+  .arrow-right {
+    top: 345px;
+    left: 335px;
   }
 
   .chooseanimal-flower_right img {
@@ -923,7 +945,7 @@ background-clip: text;
   }
 
   .chooseanimal-card:not(:nth-child(-n+2)) {
-    margin-top: 92px;
+    /* margin-top: 92px; */
   }
 
   .chooseanimal-card:nth-last-child(-n+2) {
@@ -935,6 +957,10 @@ background-clip: text;
     justify-content: space-between;
     height: 47px;
     padding: 8px 12px 12px 12px;
+  }
+
+  .chooseanimal-button {
+    margin: 0px 0px 100px 0px;
   }
 }
 
