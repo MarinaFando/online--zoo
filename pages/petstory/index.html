@@ -12,6 +12,7 @@
 </head>
 <body>
   <div class="grey-area" onclick="closeBurgerMenu()"></div>
+  <div class="grey-popuparea" onclick="closeAllPopups()"></div>
   <div class="wrapper">
     <header class="header">
       <div class="header__container container">
@@ -119,7 +120,7 @@
           <img src="../../assets/images/section-chooseanimal/palm_foto.jpeg" alt="Palm">
         </div>
         <div class="chooseanimal-mainblock">
-        <div class="chooseanimal-arrow arrow-left" onclick="plusSlides()">
+        <div class="chooseanimal-arrow arrow-left" onclick="showSlides()">
           <button type="button"><img src="../../assets/icons/section-chooseanimal/arrow.svg" alt="Button with left arrow"></button>
         </div>
         <div class="chooseanimal-cards">
@@ -208,7 +209,7 @@
             </div>
           </div>
         </div>
-        <div class="chooseanimal-arrow arrow-right" onclick="plusSlides()">
+        <div class="chooseanimal-arrow arrow-right" onclick="showSlides()">
           <button type="button"><img src="../../assets/icons/section-chooseanimal/arrow2.svg" alt="Button with right arrow"></button>
         </div>
         </div>
@@ -270,10 +271,89 @@
         </div>
       </section>
       <section class="page-testimonials container">
+        <div id="popup1" class="popupcard-container">
+          <div class="testimonials-popupcard">
+            <div class="testimonials-popupcardtop">
+              <div class="testimonials-popupcardicon">
+                <img src="../../assets/icons/section-testimonials/user_icon.svg" alt="User icon">
+              </div>
+              <div class="card-top top-text">
+                <div class="popuptop-name"></div>
+                <p>Michael John</p>
+                <div class="popuptop-country">
+                  <p>Local Austria</p>
+                  <p>•</p>
+                  <p>Today</p>
+                </div>
+              </div>
+            </div>
+            <div class="popuptop-details">
+              <p>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+                The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              </p>
+            </div>
+          </div>
+          <button class="popup-button" onclick="closePopup('popup1')">
+            <img src="../../assets/icons/section-testimonials/x_icon.svg">
+          </button>
+        </div>
+        <div id="popup2" class="popupcard-container">
+          <div class="testimonials-popupcard">
+            <div class="testimonials-popupcardtop">
+              <div class="testimonials-popupcardicon">
+                <img src="../../assets/icons/section-testimonials/user_icon.svg" alt="User icon">
+              </div>
+              <div class="card-top top-text">
+                <div class="popuptop-name"></div>
+                <p>Oskar Samborsky</p>
+                <div class="popuptop-country">
+                  <p>Local Austria</p>
+                  <p>•</p>
+                  <p>Yesterday</p>
+                </div>
+              </div>
+            </div>
+            <div class="popuptop-details">
+              <p>Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas.
+                The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              </p>
+            </div>
+          </div>
+          <button class="popup-button" onclick="closePopup('popup2')">
+            <img src="../../assets/icons/section-testimonials/x_icon.svg">
+          </button>
+        </div>
+        <div id="popup3" class="popupcard-container">
+          <div class="testimonials-popupcard">
+            <div class="testimonials-popupcardtop">
+              <div class="testimonials-popupcardicon">
+                <img src="../../assets/icons/section-testimonials/user_icon.svg" alt="User icon">
+              </div>
+              <div class="card-top top-text">
+                <div class="popuptop-name"></div>
+                <p>Fredericka Michelin</p>
+                <div class="popuptop-country">
+                  <p>Local Austria</p>
+                  <p>•</p>
+                  <p>Yesterday</p>
+                </div>
+              </div>
+            </div>
+            <div class="popuptop-details">
+              <p>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+                The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met.
+                The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              </p>
+            </div>
+          </div>
+          <button class="popup-button" onclick="closePopup('popup3')">
+            <img src="../../assets/icons/section-testimonials/x_icon.svg">
+          </button>
+        </div>
         <div class="testimonials-mainblock">
           <h3>Testimonials</h3>
           <div class="testimonials-cards">
-            <div class="testimonials-card">
+            <div class="testimonials-card" onclick="showPopup('popup1')">
               <div class="testimonials-cardtop">
                 <div class="testimonials-cardicon">
                   <img src="../../assets/icons/section-testimonials/user_icon.svg" alt="User icon">
@@ -294,7 +374,7 @@
                 </p>
               </div>
             </div>
-            <div class="testimonials-card">
+            <div class="testimonials-card" onclick="showPopup('popup2')" >
               <div class="testimonials-cardtop">
                 <div class="testimonials-cardicon">
                   <img src="../../assets/icons/section-testimonials/user_icon.svg" alt="User icon">
@@ -315,7 +395,7 @@
                 </p>
               </div>
             </div>
-            <div class="testimonials-card">
+            <div class="testimonials-card" onclick="showPopup('popup3')">
               <div class="testimonials-cardtop">
                 <div class="testimonials-cardicon">
                   <img src="../../assets/icons/section-testimonials/user_icon.svg" alt="User icon">
@@ -337,7 +417,7 @@
                 </p>
               </div>
             </div>
-            <div class="testimonials-card">
+            <div class="testimonials-card" onclick="showPopup('popup4')">
               <div class="testimonials-cardtop">
                 <div class="testimonials-cardicon">
                   <img src="../../assets/icons/section-testimonials/user_icon.svg" alt="User icon">
@@ -373,7 +453,6 @@
     </main>
     <footer class="footer container">
        <div class="footer-mainblock">
-
         <div class="footer-top">
           <div class="footer-contactus">
             <div class="contactus-left">
@@ -406,7 +485,6 @@
             </ul>
           </nav>
         </div>
-
         <div class="footer-contactlist">
           <ul class="contactlist-items">
             <li class="contactlist-item">
@@ -455,7 +533,6 @@
               <p>©RSSchool & ©Yem Digital 2021</p>
             </div>
         </div>
-
       </div>
     </footer>
   </div>

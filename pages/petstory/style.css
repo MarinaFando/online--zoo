@@ -48,9 +48,11 @@ body {
   font-family: Roboto;
   background-color: #fff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.grey-area {
+.grey-area,
+.grey-popuparea {
   display: none;
 }
 
@@ -135,7 +137,7 @@ sub {
   position: absolute;
   left: 0px;
   top: 0;
-  z-index: 50;
+  z-index: 7;
 }
 
 .header__container {
@@ -253,6 +255,18 @@ sub {
     z-index: 5;
   }
 
+
+  .grey-popuparea {
+    position:fixed;
+    left:0;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background:#000;
+    opacity:0.5;
+    z-index: 8;
+  }
+
   .burger-container {
     flex-direction: column;
     position: absolute;
@@ -263,7 +277,7 @@ sub {
     height: 329px;
     margin: auto;
     background-color: rgb(255, 255, 255);
-    z-index: 71;
+    z-index: 7;
     padding: 10px;
   }
 
@@ -772,6 +786,7 @@ background-clip: text;
   height: 872px;
   margin: 0px 20px;
   border-radius: 20px;
+  row-gap: 20px;
 }
 
 .chooseanimal-card {
@@ -919,8 +934,6 @@ background-clip: text;
   .chooseanimal-mainblock {
     display: flex;
     justify-content: space-between;
-    /* align-items: stretch; */
-    /* flex-direction: row; */
     margin: 0px 20px 60px 20px;
     background-color: #fff;
   }
@@ -944,9 +957,6 @@ background-clip: text;
     margin-top: 0px;
   }
 
-  .chooseanimal-card:not(:nth-child(-n+2)) {
-    /* margin-top: 92px; */
-  }
 
   .chooseanimal-card:nth-last-child(-n+2) {
     display: none;
@@ -1247,7 +1257,6 @@ background-clip: text;
   .card-icon {
     margin-bottom: 10px;
   }
-
 }
 
 .testimonials-mainblock {
@@ -1281,6 +1290,72 @@ background-clip: text;
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid #FEBDAB;
+  pointer-events: none;
+}
+
+.popupcard-container {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 20px 36px 17px 17px;
+  display: none;
+  z-index: 100;
+}
+
+.testimonials-popupcard{
+  padding: 15px;
+  height: 391px;
+  width: 268px;
+  padding: 15px;
+  background: #F1F3F2;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #FEBDAB;
+}
+
+.testimonials-popupcardicon {
+  margin-right: 10px;
+}
+
+.testimonials-popupcardtop {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 11px;
+}
+
+.popuptop-name {
+  line-height: 120%;
+  color: #000000;
+}
+
+.popuptop-country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.94rem;
+  line-height: 120%;
+  color: #BDBDBD;
+}
+
+.popuptop-details {
+  font-weight: 300;
+  font-size: 0.94rem;
+  line-height: 120%;
+  color: #767474;
+  padding-bottom: 19px;
+  overflow: hidden;
+}
+
+.popup-button {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 12px;
+  right: 10px;
+  background-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .testimonials-cardtop {
@@ -1380,6 +1455,7 @@ input[type=range] {
     border-radius: 20px;
     overflow: hidden;
     border: 2px solid #FEBDAB;
+    pointer-events: none;
   }
 
   .testimonials-flower {
@@ -1421,6 +1497,7 @@ input[type=range] {
     border-radius: 20px;
     overflow: hidden;
     border: 2px solid #FEBDAB;
+    pointer-events: all;
   }
 
   .testimonials-flower {
@@ -1527,7 +1604,6 @@ footer {
   align-items: center;
   text-align: center;
 }
-
 
 .contactlist-item:active {
   color: #4B9200;
