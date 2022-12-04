@@ -30,3 +30,12 @@ function closeAllPopups() {
   document.querySelectorAll(".popupcard-container")
   .forEach((popup) => closePopup(popup.id));
 }
+
+function showSlides() {
+  let cards = document.querySelectorAll(".chooseanimal-card");
+  cards.forEach(
+    (card) => {
+      card.style.order = Math.floor(Math.random() * 7)
+    }
+  )
+}
