@@ -600,7 +600,6 @@ input[type="range"]:focus::-webkit-slider-thumb {
   border: 1px solid #FE9013;
   outline: 2px solid #FE9013;
   outline-offset: 13px;
-
 }
 
 input[type="range"]:focus::-moz-range-thumb {
@@ -615,8 +614,8 @@ option {
   padding: 0;
 }
 
-option:nth-child(3) {
-  color: #E47209;
+.select {
+  color: #FE9013;
 }
 
 .schema-countofmeal p:not(:last-child) {
@@ -701,6 +700,7 @@ option:nth-child(3) {
   justify-content:center;
   align-items: center;
   color: #000000;
+  font-size: 1rem;
   margin-bottom: 25px;
 }
 
@@ -717,6 +717,10 @@ option:nth-child(3) {
 }
 
 .donate-amountofmoney-short {
+  display: none;
+}
+
+.donate-amountofmoney-middle {
   display: none;
 }
 
@@ -773,6 +777,13 @@ input[type="radio"]:checked {
     padding: 10px 44px 46px 44px;
   }
 
+  .donate-amountofmoney-long {
+    display: none;
+  }
+
+  .donate-amountofmoney-middle {
+  display: flex;
+  }
 }
 
 @media (max-width: 640px) {
@@ -813,13 +824,13 @@ input[type="radio"]:checked {
     line-height: 140%;
   }
 
-  .donate-amountofmoney-long {
-    display: none;
-  }
-
   .donate-amountofmoney-short {
     display: flex;
     justify-content: flex-start;
+  }
+
+  .donate-amountofmoney-middle {
+    display: none;
   }
 
   .input-amount {
