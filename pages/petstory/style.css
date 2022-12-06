@@ -1410,30 +1410,26 @@ input[type="range"] {
   outline: none;
 }
 
-input[type="range"]::-webkit-slider-thumb,
-input[type=”range”]::-moz-range-thumb,
-input[type=”range”]::-ms-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 6px;
-  width: 12.5%;
+  width: 75px;
   border-radius: 5px;
   background: #FE9013;
   cursor: ew-resize;
   transition: .5s ease-in-out;
 }
 
-input[type=range]::-webkit-slider-runnable-track,
-input[type=”range”]::-moz-range-track,
-input[type=”range”]::-ms-track  {
+input[type=range]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
-    background-image: 0.5px solid linear-gradient(#FEBDAB, #EAF7FE);
+  background-image: 0.5px solid linear-gradient(#FEBDAB, #EAF7FE);
   box-shadow: none;
   border: none;
   background: transparent;
 }
 
 input[type="range"]::-webkit-slider-thumb:active {
-  transform: scale(1.6);
+  transform: scale(1.2);
 }
 
 .testimonials-button {
