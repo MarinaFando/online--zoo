@@ -950,7 +950,6 @@ background-clip: text;
 
   .chooseanimal-flower_right img {
     height: 128px;
-
   }
 
   .chooseanimal-card:not(:nth-child(-n+3)) {
@@ -979,6 +978,7 @@ background-clip: text;
   .chooseanimal-mainblock {
     width: 280px;
     margin: 0px 17px;
+    height: 1388px;
   }
 
   .chooseanimal-card {
@@ -991,6 +991,7 @@ background-clip: text;
     position: relative;
     z-index: 1;
     margin: 0px 0px 0px 0px;
+    row-gap: 20px;
   }
 
   .chooseanimal-arrow {
@@ -1006,7 +1007,7 @@ background-clip: text;
   }
 
   .chooseanimal-button {
-    margin-bottom: 60px;
+    margin: 20px 0px 60px 0px;
     z-index: 5;
   }
 
