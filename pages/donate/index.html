@@ -39,7 +39,50 @@
         <div class="burger-menu" onclick="showBurgerMenu()">
           <img src="../../assets/icons/header/burger_menu.svg" alt="Menu">
         </div>
-
+        <div class="burger-container">
+          <div class="top-burgermenu">
+            <div>
+              <div class="burger-logo">
+                <a href="/online-zoo/pages/petstory/">
+                  <h1>PetStory online</h1>
+                </a>
+              </div>
+              <div class="burger-bambuk">
+                <img src="../../assets/icons/header/bamboo-orange.svg" alt="bamboo-icon"/>
+              </div>
+            </div>
+            <button class="cross-button" type="button" onclick="closeBurgerMenu()"><img src="../../assets/icons/header/x_icon.svg" alt="Cross button"></button>
+          </div>
+          <ul class="burgermenu-list" style="display: block;">
+            <li class="burgermenu-item">
+              <a class="burgermenu-link" href="/online-zoo/pages/petstory/">
+                About
+              </a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Map</a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Zoos</a>
+            </li>
+            <li class="burgermenu-item">
+              <a
+                class="burgermenu-link"
+                href="/online-zoo/pages/donate/index.html"
+              >
+                Donate
+              </a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Contact us</a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">
+                Designed by &#169
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="page">
@@ -74,32 +117,45 @@
             </div>
             <div class="donate-amountofmoney donate-amountofmoney-long">
               <label for="amount">Amount</label><br />
-              <input class="slider" type="range" min="1" max="8" step="1" id="amount" name="amount" list="amountdonation" value="3"/>
-              <datalist id="amountdonation">
-                <option value="5000" label="$5000"></option>
-                <option value="2000" label="$2000"></option>
-                <option value="1000" label="$1000"></option>
-                <option value="500" label="$500"></option>
-                <option value="250" label="$250"></option>
-                <option value="100" label="$100"></option>
-                <option value="50" label="$50"></option>
-                <option value="25" label="$25"></option>
+              <input id="amountlong" class="slider" type="range" min="1" max="8" step="1"  name="amount" list="amountdonationlong" value="3" onclick="setValue()"/>
+              <datalist id="amountdonationlong">
+                <option id="sliderlongpoint1" class="sliderpoint" value="5000" label="$5000"></option>
+                <option id="sliderlongpoint2" class="sliderpoint" value="2000" label="$2000"></option>
+                <option id="sliderlongpoint3" class="sliderpoint select" value="1000" label="$1000"></option>
+                <option id="sliderlongpoint4" class="sliderpoint" value="500" label="$500"></option>
+                <option id="sliderlongpoint5" class="sliderpoint" value="250" label="$250"></option>
+                <option id="sliderlongpoint6" class="sliderpoint" value="100" label="$100"></option>
+                <option id="sliderlongpoint7" class="sliderpoint" value="50" label="$50"></option>
+                <option id="sliderlongpoint8" class="sliderpoint" value="25" label="$25"></option>
+              </datalist>
+            </div>
+            <div class="donate-amountofmoney donate-amountofmoney-middle">
+              <label for="amount">Amount</label><br />
+              <input id="amountmiddle" class="slider" type="range" min="1" max="7" step="1"  name="amount" list="amountdonationmiddle" value="3" onclick="setValue()"/>
+              <datalist id="amountdonationmiddle">
+                <option id="slidermiddlepoint1" class="sliderpoint" value="2000" label="$2000"></option>
+                <option id="slidermiddlepoint2" class="sliderpoint select" value="1000" label="$1000"></option>
+                <option id="slidermiddlepoint3" class="sliderpoint" value="500" label="$500"></option>
+                <option id="slidermiddlepoint4" class="sliderpoint" value="250" label="$250"></option>
+                <option id="slidermiddlepoint5" class="sliderpoint" value="100" label="$100"></option>
+                <option id="slidermiddlepoint6" class="sliderpoint" value="50" label="$50"></option>
+                <option id="slidermiddlepoint7" class="sliderpoint" value="25" label="$25"></option>
               </datalist>
             </div>
             <div class="donate-amountofmoney donate-amountofmoney-short">
               <label for="amount">Amount</label>
-              <input class="slider" type="range" min="1" max="5" step="1" id="amount" name="amount" list="amountdonation" value="3"/>
-              <datalist id="amountdonation">
-                <option value="5000" label="$500"></option>
-                <option value="2000" label="$250"></option>
-                <option value="1000" label="$100"></option>
-                <option value="500" label="$50"></option>
-                <option value="250" label="$25"></option>
+              <input id="amountshort" class="slider" type="range" min="1" max="5" step="1"  name="amount" list="amountdonationshort" onclick="setValue()"/>
+              <datalist id="amountdonationshort">
+                <option id="slidershortpoint1" class="sliderpoint" value="500" label="$500"></option>
+                <option id="slidershortpoint2" class="sliderpoint" value="250" label="$250"></option>
+                <option id="slidershortpoint3" class="sliderpoint select" value="100" label="$100"></option>
+                <option id="slidershortpoint4" class="sliderpoint" value="50" label="$50"></option>
+                <option id="slidershortpoint5" class="sliderpoint" value="25" label="$25"></option>
               </datalist>
             </div>
             <div class="donate-anotheramount">
               <div class="anotheramount-input">
-                <input class="input-amount" type="number" placeholder="Another amount" maxlength="4">
+                <input id="anotheramount" class="input-amount" type="number" placeholder="Another amount" data-maxlength="4" oninput="this.value=this.value.slice(0,this.dataset.maxlength)">
                 <img src="../../assets/icons/section-donate/Vector.svg" alt="Dollar icon">
               </div>
               <form class="anotheramount-radio">
@@ -121,7 +177,6 @@
     </main>
     <footer class="footer container">
        <div class="footer-mainblock">
-
         <div class="footer-top">
           <div class="footer-contactus">
             <div class="contactus-left">
@@ -207,5 +262,6 @@
       </div>
     </footer>
   </div>
+  <script type="text/javascript" src="donate.js"></script>
 </body>
 </html>

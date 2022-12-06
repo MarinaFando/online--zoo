@@ -48,6 +48,12 @@ body {
   font-family: Roboto;
   background-color: #fff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.grey-area,
+.grey-popuparea {
+  display: none;
 }
 
 h1 {
@@ -131,7 +137,7 @@ sub {
   position: absolute;
   left: 0px;
   top: 0;
-  z-index: 50;
+  z-index: 7;
 }
 
 .header__container {
@@ -188,6 +194,10 @@ sub {
   top: 11px;
 }
 
+.burger-container {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .header__container {
   padding: 0px 30px 0px 30px;
@@ -196,7 +206,7 @@ sub {
 
 @media (max-width: 640px) {
   .header {
-    left: 0px;
+    left: 0;
     top: 0;
     position: fixed;
     width: 100%;
@@ -232,6 +242,105 @@ sub {
 
   .burger-menu {
     display: block
+  }
+
+  .grey-area {
+    position:fixed;
+    left:0;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background:#000;
+    opacity:0.5;
+    z-index: 5;
+  }
+
+
+  .grey-popuparea {
+    position:fixed;
+    left:0;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background:#000;
+    opacity:0.5;
+    z-index: 8;
+  }
+
+  .burger-container {
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    max-width: 640px;
+    height: 329px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    z-index: 7;
+    padding: 10px;
+  }
+
+  .top-burgermenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .burger-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30.4px;
+    position: relative;
+    width: 82px;
+    text-align: center;
+    color: #FE9013;
+    font-size: 0.95rem;
+    line-height: 120%;
+    border: 0.8px solid #FE9013;
+    padding: 2.84px 3.8px;
+    border-radius: 2px;
+  }
+
+  .burger-logo h1 {
+    color: #FE9013;
+  }
+
+  .burger-bambuk {
+    color: #E47209;
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    left: 24px;
+  }
+
+  .cross-button {
+    background-color: #FFFFFF;
+    margin-right: 12px;
+  }
+
+  .burgermenu-list {
+    background-color: #FFFFFF;
+  }
+
+  .burgermenu-item {
+    font-size: 1rem;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+
+  .burgermenu-link {
+    color: #333B41;
+  }
+
+  .burgermenu-link:hover {
+    color: #F9804B;
+  }
+
+  .active {
+    background-color: #04AA6D;
+    color: white;
   }
 }
 
@@ -655,16 +764,16 @@ background-clip: text;
 }
 
 .chooseanimal-arrow button{
-  height: 64px;
-  width: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 64px;
+  width: 64px;
   border-radius: 32px;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
 
-.chooseanimal-arrow button:active{
+.chooseanimal-arrow button:active {
   background: #4B9200;
 }
 
@@ -677,6 +786,7 @@ background-clip: text;
   height: 872px;
   margin: 0px 20px;
   border-radius: 20px;
+  row-gap: 20px;
 }
 
 .chooseanimal-card {
@@ -689,10 +799,6 @@ background-clip: text;
 .chooseanimal-card:hover {
   opacity: 0.7;
   transform: translateY(-5px);
-}
-
-.chooseanimal-card:not(:nth-child(-n+3)) {
-  margin-top: 20px;
 }
 
 .card-image {
@@ -740,7 +846,6 @@ background-clip: text;
   margin: 0px 0px 100px 0px;
 }
 
-
 @media (max-width: 1000px) {
 
   .chooseanimal-mainblock {
@@ -773,93 +878,31 @@ background-clip: text;
     position: relative;
     z-index: 1;
     margin: 0px 0px 80px 0px;
-  }
-
-  .chooseanimal-arrow:first-child {
-    height: 92px;
-    width: 100%;
-    position: absolute;
-    height: 77%;
-    width:72%;
-    z-index: 3;
+    row-gap: 92px;
   }
 
   .chooseanimal-arrow {
-    height: 92px;
-    width:100%;
+    height: 65px;
     position: absolute;
-    height: 77%;
-    width: 115%;
     z-index: 3;
+  }
+
+  .arrow-left {
+    top: 367px;
+    left: 352px;
+  }
+
+  .arrow-right {
+    top: 367px;
+    left: 580px;
   }
 
   .chooseanimal-arrow button{
     cursor: pointer;
   }
 
-  .chooseanimal-card:not(:nth-child(-n+3)) {
-    margin-top: 92px;
-  }
-}
-
-@media (max-width: 1000px) {
-
-  .chooseanimal-mainblock {
-    width: 940px;
-    margin: 0px 30px 0px 30px;
-  }
-
-  .chooseanimal-flower_left img {
-    height: 202px;
-  }
-
-  .chooseanimal-flower_right img {
-    height: 180px;
-  }
-
-  .chooseanimal-card {
-    width: 293px;
-    height: 354px;
-  }
-
-  .card-image img {
-    height: 293px;
-    width: 100%;
-    background-color: #fff;
-  }
-
-  .chooseanimal-cards {
-    width: 100%;
-    height: 801px;
-    position: relative;
-    z-index: 1;
-    margin: 0px 0px 80px 0px;
-  }
-
-  .chooseanimal-arrow:first-child {
-    height: 92px;
-    width: 100%;
-    position: absolute;
-    height: 77%;
-    width:72%;
-    z-index: 3;
-  }
-
-  .chooseanimal-arrow {
-    height: 92px;
-    width:100%;
-    position: absolute;
-    height: 77%;
-    width: 115%;
-    z-index: 3;
-  }
-
-  .chooseanimal-arrow button{
-    cursor: pointer;
-  }
-
-  .chooseanimal-card:not(:nth-child(-n+3)) {
-    margin-top: 92px;
+  .chooseanimal-button {
+    margin: 0px 0px 140px 0px;
   }
 }
 
@@ -873,7 +916,7 @@ background-clip: text;
   .chooseanimal-card {
     width: 285px;
     height: 332px;
-        padding-bottom: 11px;
+    padding-bottom: 11px;
   }
 
   .card-image img {
@@ -890,27 +933,19 @@ background-clip: text;
 
   .chooseanimal-mainblock {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     margin: 0px 20px 60px 20px;
     background-color: #fff;
   }
 
-  .chooseanimal-arrow:first-child {
-    height: 92px;
-    width: 295px;
-    position: absolute;
-    height: 78%;
-    width: 72%;
-    z-index: 3;
+  .arrow-left {
+    top: 345px;
+    left: 240px;
   }
 
-  .chooseanimal-arrow {
-    height: 92px;
-    width: 295px;
-    position: absolute;
-    height: 78%;
-    width: 115%;
-    z-index: 3;
+  .arrow-right {
+    top: 345px;
+    left: 335px;
   }
 
   .chooseanimal-flower_right img {
@@ -922,9 +957,6 @@ background-clip: text;
     margin-top: 0px;
   }
 
-  .chooseanimal-card:not(:nth-child(-n+2)) {
-    margin-top: 92px;
-  }
 
   .chooseanimal-card:nth-last-child(-n+2) {
     display: none;
@@ -935,6 +967,10 @@ background-clip: text;
     justify-content: space-between;
     height: 47px;
     padding: 8px 12px 12px 12px;
+  }
+
+  .chooseanimal-button {
+    margin: 0px 0px 100px 0px;
   }
 }
 
@@ -1221,7 +1257,6 @@ background-clip: text;
   .card-icon {
     margin-bottom: 10px;
   }
-
 }
 
 .testimonials-mainblock {
@@ -1255,6 +1290,72 @@ background-clip: text;
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid #FEBDAB;
+  pointer-events: none;
+}
+
+.popupcard-container {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 20px 36px 17px 17px;
+  display: none;
+  z-index: 100;
+}
+
+.testimonials-popupcard{
+  padding: 15px;
+  height: 391px;
+  width: 268px;
+  padding: 15px;
+  background: #F1F3F2;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #FEBDAB;
+}
+
+.testimonials-popupcardicon {
+  margin-right: 10px;
+}
+
+.testimonials-popupcardtop {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 11px;
+}
+
+.popuptop-name {
+  line-height: 120%;
+  color: #000000;
+}
+
+.popuptop-country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.94rem;
+  line-height: 120%;
+  color: #BDBDBD;
+}
+
+.popuptop-details {
+  font-weight: 300;
+  font-size: 0.94rem;
+  line-height: 120%;
+  color: #767474;
+  padding-bottom: 19px;
+  overflow: hidden;
+}
+
+.popup-button {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 12px;
+  right: 10px;
+  background-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .testimonials-cardtop {
@@ -1293,17 +1394,45 @@ background-clip: text;
   overflow: hidden;
 }
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
-  background: linear-gradient(to Right, #FEBDAB 74%, #F3A9F8 66%, #E0D8F0 100%,#EAF7FE 100%,#EAF7FE 100%);
-  border: 0.5px solid #FEBDAB;
+  margin-right: 15px;
+  width: 390px;
   height: 8px;
-  width: 600px;
-  border-radius: 5px;
   background: #F5F7F6;
+  border-radius: 5px;
+
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 31px;
   cursor: pointer;
   outline: none;
-  margin-bottom: 31px;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type=”range”]::-moz-range-thumb,
+input[type=”range”]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 6px;
+  width: 12.5%;
+  border-radius: 5px;
+  background: #FE9013;
+  cursor: ew-resize;
+  transition: .5s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track,
+input[type=”range”]::-moz-range-track,
+input[type=”range”]::-ms-track  {
+  -webkit-appearance: none;
+    background-image: 0.5px solid linear-gradient(#FEBDAB, #EAF7FE);
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.6);
 }
 
 .testimonials-button {
@@ -1354,6 +1483,7 @@ input[type=range] {
     border-radius: 20px;
     overflow: hidden;
     border: 2px solid #FEBDAB;
+    pointer-events: none;
   }
 
   .testimonials-flower {
@@ -1395,6 +1525,7 @@ input[type=range] {
     border-radius: 20px;
     overflow: hidden;
     border: 2px solid #FEBDAB;
+    pointer-events: all;
   }
 
   .testimonials-flower {
@@ -1501,7 +1632,6 @@ footer {
   align-items: center;
   text-align: center;
 }
-
 
 .contactlist-item:active {
   color: #4B9200;
