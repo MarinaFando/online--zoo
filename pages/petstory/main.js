@@ -32,7 +32,6 @@ function closeAllPopups() {
 }
 
 function showSlides(arrow) {
-  console.log(arrow)
   let cards = document.querySelectorAll(".chooseanimal-card");
   cards.forEach(
     (card) => {
