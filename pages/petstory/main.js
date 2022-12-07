@@ -31,11 +31,16 @@ function closeAllPopups() {
   .forEach((popup) => closePopup(popup.id));
 }
 
-function showSlides() {
+function showSlides(arrow) {
   let cards = document.querySelectorAll(".chooseanimal-card");
   cards.forEach(
     (card) => {
       card.style.order = Math.floor(Math.random() * 7)
     }
-  )
-}
+    )
+    const cardsContainer = document.querySelector(".chooseanimal-cards");
+    cardsContainer.style["animation-name"] = `flipcard-${arrow}`;
+    setTimeout(() => {
+      cardsContainer.style["animation-name"] = '';
+    }, 500)
+  }
