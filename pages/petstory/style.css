@@ -787,6 +787,8 @@ background-clip: text;
   margin: 0px 20px;
   border-radius: 20px;
   row-gap: 20px;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
 }
 
 .chooseanimal-card {
@@ -794,6 +796,24 @@ background-clip: text;
   overflow: hidden;
   border: 2px solid #FA6F32;
   border-radius: 20px;
+}
+
+@keyframes flipcard-left {
+  from {
+    opacity: 0.5;
+    transform: translate(-3%);}
+  to {
+    opacity: 1;
+    transform: translate(0%);}
+}
+
+@keyframes flipcard-right {
+  from {
+    opacity: 0.5;
+    transform: translateX(3%);}
+  to {
+    opacity: 1;
+    transform: translateX(0%);}
 }
 
 .chooseanimal-card:hover {
