@@ -47,9 +47,9 @@ function setValue() {
   const currentAmountShort = document.querySelector(`#slidershortpoint${amountShort}`).value;
   document.querySelector(`#slidershortpoint${amountShort}`).classList.add("select")
 
-
   if (window.screen.width > 1000) {
-    document.querySelector("#anotheramount").value = currentAmountLong
+    document.querySelector("#anotheramount").value = currentAmountLong;
+
   }
   if (window.screen.width <= 1000 & window.screen.width > 640) {
     document.querySelector("#anotheramount").value = currentAmountMiddle
@@ -57,4 +57,17 @@ function setValue() {
   if (window.screen.width <= 640) {
     document.querySelector("#anotheramount").value = currentAmountShort
   }
+}
+
+function onAmountChange(e) {
+  const currentValue = document.querySelector("#anotheramount").value;
+  const amountValues = document.querySelectorAll(".sliderpoint");
+  const values = amountValues.forEach(item => {
+    if(item.value === currentValue) {
+      item.parentElement.previousElementSibling.value = item.id.slice(-1);
+      item.classList.add("select")
+    } else {
+      item.classList.remove("select");
+    }
+  })
 }

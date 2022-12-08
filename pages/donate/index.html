@@ -155,7 +155,7 @@
             </div>
             <div class="donate-anotheramount">
               <div class="anotheramount-input">
-                <input id="anotheramount" class="input-amount" type="number" placeholder="Another amount" data-maxlength="4" oninput="this.value=this.value.slice(0,this.dataset.maxlength)">
+                <input id="anotheramount" class="input-amount" type="number" placeholder="Another amount" data-maxlength="4" oninput="this.value=this.value.slice(0,this.dataset.maxlength)" onkeyup="onAmountChange()">
                 <img src="../../assets/icons/section-donate/Vector.svg" alt="Dollar icon">
               </div>
               <form class="anotheramount-radio">
