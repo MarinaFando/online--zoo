@@ -1282,36 +1282,59 @@ background-clip: text;
 
 .testimonials-mainblock {
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 140px 220px 180px 220px;
-  overflow: hidden;
+  padding: 140px 220px 185px 220px;
+  z-index: 3;
+}
+
+.testimonials-cardscontainer {
+  display: flex;
+  justify-content: center;
+  width: 1160px;
+  height: 100%;
   z-index: 3;
 }
 
 .testimonials-cards {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  width: 1160px;
-  margin: 47px 0px 21px 0px;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  margin: 47px 0px 0px 0px;
   z-index: 5;
+  display: flex;
+  flex-wrap: nowrap;
+  animation-name: none;
+  animation-duration: 0.2s;
+  animation-delay: 0.1s;
+}
+
+@keyframes range-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);;}
+  to {
+    opacity: 1;
+    transform: translateX(0);}
 }
 
 .testimonials-card {
   padding: 15px;
   height: 391px;
-  width: 268px;
-  padding: 15px;
+  flex: 1 0 268px;
   background: #F1F3F2;
   border-radius: 20px;
-  overflow: hidden;
   border: 2px solid #FEBDAB;
   pointer-events: none;
+  margin-bottom: 20px;
+}
+
+.testimonials-card:not(:last-child) {
+  margin-right: 29px;
 }
 
 .popupcard-container {
@@ -1413,6 +1436,7 @@ background-clip: text;
   color: #767474;
   padding-bottom: 19px;
   overflow: hidden;
+  height: 309px;
 }
 
 input[type="range"] {
@@ -1420,7 +1444,7 @@ input[type="range"] {
   margin-right: 15px;
   width: 390px;
   height: 8px;
-  background: #F5F7F6;
+  background: #f2f2f2;
   border-radius: 5px;
 
   background-size: 70% 100%;
@@ -1436,7 +1460,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 75px;
   border-radius: 5px;
   background: #FE9013;
-  cursor: ew-resize;
+  cursor: pointer;
   transition: .5s ease-in-out;
 }
 
@@ -1448,7 +1472,7 @@ input[type=range]::-webkit-slider-runnable-track {
   background: transparent;
 }
 
-input[type="range"]::-webkit-slider-thumb:active {
+input[type="range"]:focus::-webkit-slider-thumb {
   transform: scale(1.2);
 }
 
@@ -1471,7 +1495,19 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 @media (max-width: 1000px) {
+
+  .testimonials-cardscontainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    width: 940px;
+    height: 100%;
+    z-index: 3;
+  }
+
   .testimonials-mainblock {
+    width: 100%;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -1483,18 +1519,14 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
 
   .testimonials-cards {
-    width: 940px;
-    margin: 30px 0px 20px 0px;
-  }
-
-  .testimonials-card:last-child {
-    display: none;
+    justify-content: flex-start;
+    margin: 30px 0px 0px 0px;
   }
 
   .testimonials-card {
     padding: 15px;
     height: 391px;
-    width: 293px;
+    flex: 1 0 293px;
     padding: 15px;
     background: #F1F3F2;
     border-radius: 20px;
@@ -1520,6 +1552,9 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 @media (max-width: 640px) {
   .testimonials-mainblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 60px 20px 80px 20px;
     z-index: 3;
   }
@@ -1531,32 +1566,39 @@ input[type="range"]::-webkit-slider-thumb:active {
     z-index: 5;
   }
 
-  .testimonials-progressbar {
-    display: none;
-  }
-
   .testimonials-card {
     height: 109px;
     width: 600px;
-    background: #F1F3F2;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 2px solid #FEBDAB;
+    flex: 1 0 109px;
     pointer-events: all;
   }
 
+  .testimonials-card:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+
   .testimonials-flower {
-    bottom: -25px;
+    bottom: -48px;
     right: 0px;
   }
 
   .testimonials-flower img{
-    height: 77px;
+    height: 147.15px;
   }
 
   .testimonials-button {
     width: 100%;
     text-align: center;
+  }
+
+  .top-details {
+    height: 38px;
+    overflow: hidden;
+  }
+
+  .testimonials-progressbar {
+    display: none;
   }
 }
 
@@ -1576,6 +1618,11 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
 
   .testimonials-flower {
+    bottom: -25px;
+    right: 0px;
+  }
+
+  .testimonials-flower img {
     height: 77px;
   }
 
@@ -1588,6 +1635,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 footer {
   background-color: #111115;
   color: #FFFFFF;
+  z-index: 3;
 }
 
 .footer-mainblock {
