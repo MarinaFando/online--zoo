@@ -44,3 +44,21 @@ function showSlides(arrow) {
       cardsContainer.style["animation-name"] = '';
     }, 500)
   }
+
+
+  const elem = document.querySelector('input[type="range"]');
+  const cardsContainer = document.querySelector(".testimonials-cards")
+
+  const rangeValue = function () {
+    if(window.screen.width <= 1000) elem.setAttribute("max", "8");
+    const newValue = elem.value;
+    console.log(newValue)
+    const target = document.querySelector(".testimonials-progressbar");
+    cardsContainer.scrollTo(newValue * 330, 0)
+        cardsContainer.style["animation-name"] = `range-animation`;
+        setTimeout(() => {
+          cardsContainer.style["animation-name"] = "";
+        }, 300);
+  };
+
+  elem.addEventListener("input", rangeValue);
