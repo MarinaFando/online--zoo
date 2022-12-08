@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Online ZOO</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <nav class="header-menu">
+          <div class="header-logo">
+            <a href="/online-zoo/pages/petstory/">
+              <h1>PetStory online</h1>
+            </a>
+          </div>
+          <div class="logo-bambuk">
+            <img src="../../assets/icons/header/bamboo.svg" alt="bamboo-icon">
+          </div>
+          <div>
+            <ul class="menu-list">
+              <li class="menu-item"><a class="menu-link" href="/online-zoo/pages/petstory/">About</a></li>
+              <li class="menu-item"><a class="menu-link">Map</a></li>
+              <li class="menu-item"><a class="menu-link">Zoos</a></li>
+              <li class="menu-item"><a class="menu-link" href="/online-zoo/pages/donate/index.html">Donate</a></li>
+              <li class="menu-item"><a class="menu-link">Contact us</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header-designby">
+          <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by &#169</a>
+        </div>
+        <div class="burger-menu" onclick="showBurgerMenu()">
+          <img src="../../assets/icons/header/burger_menu.svg" alt="Menu">
+        </div>
+        <div class="burger-container">
+          <div class="top-burgermenu">
+            <div>
+              <div class="burger-logo">
+                <a href="/online-zoo/pages/petstory/">
+                  <h1>PetStory online</h1>
+                </a>
+              </div>
+              <div class="burger-bambuk">
+                <img src="../../assets/icons/header/bamboo-orange.svg" alt="bamboo-icon"/>
+              </div>
+            </div>
+            <button class="cross-button" type="button" onclick="closeBurgerMenu()"><img src="../../assets/icons/header/x_icon.svg" alt="Cross button"></button>
+          </div>
+          <ul class="burgermenu-list" style="display: block;">
+            <li class="burgermenu-item">
+              <a class="burgermenu-link" href="/online-zoo/pages/petstory/">
+                About
+              </a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Map</a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Zoos</a>
+            </li>
+            <li class="burgermenu-item">
+              <a
+                class="burgermenu-link"
+                href="/online-zoo/pages/donate/index.html"
+              >
+                Donate
+              </a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link">Contact us</a>
+            </li>
+            <li class="burgermenu-item">
+              <a class="burgermenu-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">
+                Designed by &#169
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page-watchonline container">
+        <div class="watchonline-mainimage"></div>
+      </section>
+      <section class="page-donate container">
+        <div class="donate-top">
+          <h3>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
+          <p>Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with educational programs and public and private events cancelled or postponed for additional months. We need you now more than ever to help ensure that we overcome these challenges. We have been actively raising funds in the community, and we are grateful for the generosity.  But much more support is still needed, and we need your help! Please consider a gift today &#45; no matter what size &#45; to help us sustain our mission.</p>
+          <h3>Donation Information</h3>
+        </div>
+          <div class="donate-mainblock">
+          <div class="donate-blocktext">
+            <h2>Pick and feed a friend</h2>
+            <div class="donate-text">
+              <div class="text-firstpart">
+                <sub>We know the animals bring you joy, and in these extraordinary times, we&apos;re glad.</sub>
+              </div>
+            </div>
+            <div class="donate-schema">
+              <div class="schema-countofmeal">
+                <p>4</p>
+                <p>Panda diet for the day.</p>
+              </div>
+              <div class="schema-icon">
+                <img src="../../assets/icons/section-donate/x_icon.svg" alt="Times">
+              </div>
+              <div class="schema-animal">
+                <img src="../../assets/images/section-donate/panda_widget1.svg" alt="Animal image">
+              </div>
+            </div>
+            <div class="donate-amountofmoney donate-amountofmoney-long">
+              <label for="amount">Amount</label><br />
+              <input id="amountlong" class="slider" type="range" min="1" max="8" step="1"  name="amount" list="amountdonationlong" value="3" onclick="setValue()"/>
+              <datalist id="amountdonationlong">
+                <option id="sliderlongpoint1" class="sliderpoint" value="5000" label="$5000"></option>
+                <option id="sliderlongpoint2" class="sliderpoint" value="2000" label="$2000"></option>
+                <option id="sliderlongpoint3" class="sliderpoint select" value="1000" label="$1000"></option>
+                <option id="sliderlongpoint4" class="sliderpoint" value="500" label="$500"></option>
+                <option id="sliderlongpoint5" class="sliderpoint" value="250" label="$250"></option>
+                <option id="sliderlongpoint6" class="sliderpoint" value="100" label="$100"></option>
+                <option id="sliderlongpoint7" class="sliderpoint" value="50" label="$50"></option>
+                <option id="sliderlongpoint8" class="sliderpoint" value="25" label="$25"></option>
+              </datalist>
+            </div>
+            <div class="donate-amountofmoney donate-amountofmoney-middle">
+              <label for="amount">Amount</label><br />
+              <input id="amountmiddle" class="slider" type="range" min="1" max="7" step="1"  name="amount" list="amountdonationmiddle" value="3" onclick="setValue()"/>
+              <datalist id="amountdonationmiddle">
+                <option id="slidermiddlepoint1" class="sliderpoint" value="2000" label="$2000"></option>
+                <option id="slidermiddlepoint2" class="sliderpoint select" value="1000" label="$1000"></option>
+                <option id="slidermiddlepoint3" class="sliderpoint" value="500" label="$500"></option>
+                <option id="slidermiddlepoint4" class="sliderpoint" value="250" label="$250"></option>
+                <option id="slidermiddlepoint5" class="sliderpoint" value="100" label="$100"></option>
+                <option id="slidermiddlepoint6" class="sliderpoint" value="50" label="$50"></option>
+                <option id="slidermiddlepoint7" class="sliderpoint" value="25" label="$25"></option>
+              </datalist>
+            </div>
+            <div class="donate-amountofmoney donate-amountofmoney-short">
+              <label for="amount">Amount</label>
+              <input id="amountshort" class="slider" type="range" min="1" max="5" step="1"  name="amount" list="amountdonationshort" onclick="setValue()"/>
+              <datalist id="amountdonationshort">
+                <option id="slidershortpoint1" class="sliderpoint" value="500" label="$500"></option>
+                <option id="slidershortpoint2" class="sliderpoint" value="250" label="$250"></option>
+                <option id="slidershortpoint3" class="sliderpoint select" value="100" label="$100"></option>
+                <option id="slidershortpoint4" class="sliderpoint" value="50" label="$50"></option>
+                <option id="slidershortpoint5" class="sliderpoint" value="25" label="$25"></option>
+              </datalist>
+            </div>
+            <div class="donate-anotheramount">
+              <div class="anotheramount-input">
+                <input id="anotheramount" class="input-amount" type="number" placeholder="Another amount" data-maxlength="4" oninput="this.value=this.value.slice(0,this.dataset.maxlength)" onkeyup="onAmountChange()">
+                <img src="../../assets/icons/section-donate/Vector.svg" alt="Dollar icon">
+              </div>
+              <form class="anotheramount-radio">
+                <input type="radio" id="monthly" name="payment">
+                <label for="monthly" class="container-radio">Monthly</label><br/>
+                <input type="radio"id="once" name="payment"  checked>
+                <label for="once" class="container-radio">Once</label>
+              </form>
+            </div>
+            <div class="donate-button">
+              <button class="button-orange button-orange_round" type="button">Feed a friend now</button>
+            </div>
+            <div class="donate-share">
+              <p>Share with your friends on social networks</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer container">
+       <div class="footer-mainblock">
+        <div class="footer-top">
+          <div class="footer-contactus">
+            <div class="contactus-left">
+              <div class="footer-logo">
+                <a href="/online-zoo/pages/petstory/index.html">
+                  <p>PetStory online</p>
+                </a>
+              </div>
+              <div class="footerlogo-bambuk">
+                <img src="../../assets/icons/header/bamboo.svg" alt="bamboo-icon">
+              </div>
+            </div>
+            <div class="footersub">
+              <sub>Subscribe to our news</sub>
+              <div class="footersubs-email">
+                <input type="email" placeholder="Enter your email" >
+                <button type="button">Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="footer-button">
+            <a href="/online-zoo/pages/donate/index.html"><button class="button-orange" type="button">donate for volunteers</button></a>
+          </div>
+          <nav>
+            <ul class="footernav-additionallist">
+              <li class="footernav-item"><a class="menu-link">About</a></li>
+              <li class="footernav-item"><a class="menu-link">Map</a></li>
+              <li class="footernav-item"><a class="menu-link">Zoos</a></li>
+              <li class="footernav-item"><a class="menu-link">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-contactlist">
+          <ul class="contactlist-items">
+            <li class="contactlist-item">
+              <a class="contactlist-item" href="https://facebook.com">
+                <div class="contactlist-image">
+                  <img src="../../assets/icons/footer/facebook-justicon.svg" alt="Facebook">
+                </div>
+                <p>Facebook</p>
+              </a>
+            </li>
+            <li class="contactlist-item">
+              <a class="contactlist-item" href="https://twitter.com">
+                <div class="contactlist-image">
+                  <img src="../../assets/icons/footer/twitter-justicon.svg" alt="Twitter">
+                </div>
+                <p>Twitter</p>
+              </a>
+            </li>
+            <li class="contactlist-item">
+              <a class="contactlist-item" href="https://instagram.com">
+                <div class="contactlist-image">
+                  <img src="../../assets/icons/footer/instagram-justicon.svg" alt="Instagram">
+                </div>
+                <p>Instagram</p>
+              </a>
+            </li>
+            <li class="contactlist-item">
+              <a class="contactlist-item" href="https://youtube.com">
+                <div class="contactlist-image">
+                  <img src="../../assets/icons/footer/youtube-justicon.svg" alt="YouTube">
+                </div>
+                <p>YouTube</p>
+              </a>
+            </li>
+          </ul>
+          <nav>
+            <ul class="footernav-list">
+              <li class="footernav-item"><a class="menu-link">About</a></li>
+              <li class="footernav-item"><a class="menu-link">Map</a></li>
+              <li class="footernav-item"><a class="menu-link">Zoos</a></li>
+              <li class="footernav-item"><a class="menu-link">Contact us</a></li>
+            </ul>
+          </nav>
+            <div class="footer-designedby">
+              <p>Designed by Alisa Samborskaya</p>
+              <p>©RSSchool & ©Yem Digital 2021</p>
+            </div>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="donate.js"></script>
+</body>
+</html>
